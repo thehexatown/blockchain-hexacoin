@@ -1,0 +1,5 @@
+#Provision Tokens To Token Sale Contract
+#Set A Token price In Wei
+#Assign An Admin
+#Buy Tokens
+#End Sale

@@ -1,0 +1,34 @@
+HexaToken.deployed().then(function(instance) {tokenInstance = instance});
+
+tokenInstance.name()
+
+tokenInstance.totalSupply().then(function(s) {supply = s;});
+supply.toNumber()
+
+web3.eth.getAccounts().then(function(acc){ accounts = acc })
+accounts[0]
+
+admin = accounts[0];
+
+tokenInstance.balanceOf(admin)
+
+tokenInstance.transfer(accounts[1], 1, {from: admin})
+tokenInstance.balanceOf(accounts[1]);
+
+
+tokenInstance.approve(accounts[1], 100, {from: admim})
+tokenInstance.allowance(accounts[0], accounts[1])
+
+fromAccount = accounts[2]
+toAccount = accounts[3]
+spendingAccount = accounts[4]
+
+    
+tokenInstance.balanceOf(fromAccount);
+
+tokenInstance.approve(spendingAccount, 10, {from: fromAccount})
+tokenInstance.transferFrom(fromAccount, toAccount, 10, {from: spendingAccount})
+tokenInstance.balanceOf(fromAccount)
+tokenInstance.balanceOf(toAccount)
+tokenInstance.allowance(fromAccount, spendingAccount)
+
